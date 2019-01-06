@@ -1,0 +1,829 @@
+/*
+Author: Dream Team
+Project:  Redix
+Version:  1.1
+Date: 08.04.2017
+
+/* 1. Global changes (reset)
+   =======================================================*/
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px; 
+  line-height: 1.5em;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  
+}
+
+p {
+  color: #777777;
+  font-family: "Lato", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: #1672D2; 
+}
+
+a:hover, a:focus {
+  outline: medium none;
+  text-decoration: none; 
+}
+
+span {
+  color: red;
+}
+
+section{
+  padding: 40px 0 10px 0;
+}
+
+.theme-section-heading {
+  margin-bottom: 25px;
+  display: block;
+}
+
+audio { 
+  width: 100%; 
+  background:black;
+  display: block; 
+  margin-top: -10px; }
+
+/* 2. Navbar style
+   =======================================================*/
+
+.right {
+  float: right;
+}
+
+.navbar-fixed-top {
+  background-color: #33;3
+  border: none;
+}
+
+.navbar .nav > li a:hover{
+  color: white;
+}
+
+.navbar .nav .active > a, .navbar .nav .active > a:hover, .navbar .nav .active > a:active {
+  background-color: #333;
+  color: red;
+  /*border-top: 1px solid red;*/
+  border-bottom: 1px solid red;
+}
+
+.navbar .nav li ul li a:hover {
+  background: #333;
+  color: white;
+}
+
+.navbar .nav li ul li a:active {
+  background: transparent;
+  color: red;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #afaeae;
+}
+
+.btn-primary {
+  background-color: rgba(193, 6, 6, 0.79);
+  border: 2px solid #650202;
+  border-radius: 0;
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  outline: medium none;
+  padding: 10px 35px;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  border-color: #650202;
+  color: red !important; 
+}
+
+.btn-default {
+  background-color: transparent;
+  color: red; 
+  border: 2px solid #650202;
+  border-radius: 0;
+  font-size: 16px;
+  margin-bottom: 10px;
+  outline: medium none;
+  padding: 10px 15px;
+  border-radius: 20%;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.btn-default:hover {
+  background-color: transparent;
+  color: red; 
+  border-color: #650202;
+  border-radius:10px;
+}
+
+.btn-danger {
+  background-color: transparent;
+  border-color: transparent;
+  color: rgba(154, 150, 150, 0.32);
+  transition: all 0.1s ease-in-out 0.1s;
+}
+
+.btn-danger:hover {
+  border: 1px solid rgba(154, 150, 150, 0.32);
+  background-color: transparent;
+}
+
+.btn-danger-span {
+  color: grey;
+}
+
+.btn-info {
+  background-color: transparent;
+  border-color: #555;
+  color: #b9b9b9;
+  transition: all 0.1s ease-in-out 0.1s;
+}
+
+.btn-info:hover {
+  border: 1px solid rgba(154, 150, 150, 0.32);
+  background-color: transparent;
+}
+
+.btn-info-span {
+  color: grey;
+}
+
+
+
+/* 3. Intro-section
+   =======================================================*/
+header {
+  min-height: 100vh;
+  background: black;
+  background-image: url(../img/header/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #dedbdb;
+  text-align: center;
+  overflow: hidden;
+}
+
+.head-title-block {
+  width: 100%;
+  margin:auto;
+  padding-top: 40vh;
+}
+      
+
+/* 4. Track-section
+   =======================================================*/
+.about-section {
+  color: white;
+  background: #000;
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+
+.track-box {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 20px 30px 20px 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  margin-top: 25px;
+  margin-bottom: 40px;
+  position: relative;
+  transition: all 0.7s ease-in-out;
+}
+
+.track-box:hover {
+  border: 2px solid #8C7676;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 113px -3px rgba(214,36,36,1);
+  -moz-box-shadow: 0px 3px 113px -3px rgba(214,36,36,1);
+  box-shadow: 0px 3px 113px -3px rgba(214,36,36,1);
+}
+
+.track-box hr {
+  border: 1px solid #1a1a1a;
+  margin: 0;
+}
+
+.track-info-names,
+.track-info {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+
+.track-info li {
+  color: grey;
+  text-align: left;
+  list-style: none;
+}
+
+.track-info-names li {
+  color: grey;
+  list-style: none;
+}
+
+.track-info a,
+.track-info-names a {
+  margin: 0 0 0 0px;
+  color: grey;
+  text-align: left;
+}
+
+.track-info a:hover,
+.track-info-names a:hover{
+    color: red;
+    text-decoration: none;
+}
+
+.track-info span,
+.track-info-names span{
+  width: 20px;
+  color: #888;
+  margin-top: 3px;
+}
+
+.track-info span:hover,
+.track-info-names span:hover {
+  color: red;
+}
+
+/* 5. Service-section
+   =======================================================*/
+.services-section {
+  padding-top: 30px;
+  text-align: center;
+  background-size: 100% auto;
+  background-position: 50% 30%;
+  background-attachment: fixed;
+  background-image: url(../img/services-section/service-section-bg.jpg);
+  padding: 0;
+  overflow: hidden;
+}
+
+.design {
+  background-color: white;
+  text-align: center;
+  padding: 25px 55px 35px 55px;
+}
+
+.developer {
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 25px 55px 35px 55px;  
+}
+
+.transparent-bg {
+  background: transparent;
+}
+
+/* 6. Team-section
+   =======================================================*/
+.team-section {
+  padding-top: 30px;
+  color: white;
+  background: #000;
+  text-align: center;
+}
+
+.team-inner {
+  padding-bottom: 25px;
+}
+
+.team-member {
+  padding: 0 3% 3% 3%;
+}
+
+.team-member-info {
+  height: 100%;
+  text-align: left;
+  overflow: hidden;
+}
+
+.team-member-info img {
+  float: left;
+  margin-right: 25px;
+  border-radius: 50%;
+  border: 3px solid white;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+
+.team-member-info img:hover {
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.social-block {
+  color: white;
+  background-color: red;
+  opacity: 0.9;
+  border-radius: 10%;
+  margin-top: 2%;
+  display: block;
+}
+.social-block i {
+  color: white;
+  width: 15px;
+}
+
+.social-block i:hover {
+  color: black;
+}
+
+/* 7. Clients-section
+   =======================================================*/
+.clients-section {
+  padding-top: 30px;
+  text-align: center;
+  background-color: black;
+  background-image: url(../img/clients-section/clients-bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
+
+/*carousel starts*/
+.quote-carousel {
+  padding: 0 10px 30px 10px;
+}
+
+.quote-carousel .carousel-control {
+  background: none;
+  color: red;
+  font-size: 2.3em;
+  text-shadow: none;
+  margin-top: 30px;
+}
+
+.quote-carousel .carousel-indicators {
+  position: relative;
+  right: 50%;
+  top: auto;
+  bottom: 0px;
+  margin-top: 20px;
+  margin-right: -19px;
+}
+
+.quote-carousel .carousel-indicators li {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 3px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  opacity: 0.4;
+  overflow: hidden;
+  transition: all .4s ease-in;
+  vertical-align: middle;
+}
+
+.quote-carousel .carousel-indicators .active {
+  width: 120px;
+  height: 120px;
+  opacity: 1;
+  transition: all .2s;
+
+}
+
+.item blockquote {
+  border-left: none;
+  margin: 0;
+}
+
+.item small {
+  color: white;
+}
+
+.item blockquote p:before {
+  content: "\f10d";
+  color: red;
+  font-family: 'fontawesome';
+  float: left;
+  margin-right: 10px;
+}
+/*carousel ends*/
+
+/* 8. Price-section
+   =======================================================*/
+.price-section {
+  padding-top: 30px;
+  color: white;
+  background: #000;
+  text-align: center;
+}
+
+.price-box {
+  line-height: 1.5;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  position: relative;
+  transition: all 0.7s ease-in-out;
+}
+
+.price-box:hover {
+  border: 2px solid #8C7676;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 113px -3px rgba(214,36,36,1);
+  -moz-box-shadow: 0px 3px 113px -3px rgba(214,36,36,1);
+  box-shadow: 0px 3px 113px -3px rgba(214,36,36,1);
+}
+
+.price-box hr {
+  border: 1px solid #1a1a1a;
+}
+
+.pricing-plan {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.pricing-box p {
+  color: white;
+}
+
+.price {
+  font-size: 50px;
+  color: #fff;
+}
+
+.price .currency {
+  font-size: 20px;
+  top: -1.2em;
+}
+
+.price small {
+  font-size: 16px;
+}
+
+.pricing-info {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.pricing-info li {
+  color: grey;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+/* 9. Contact-section
+   =======================================================*/
+
+   footer {
+  background-color: black;  
+  color: #888;
+  padding: 40px 0;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+
+.contact-section {
+  color: white;
+  background: #000;
+  text-align: center;
+  padding-top: 10px;
+  
+}
+
+.contact-section i {
+  width: 5px;
+  margin-right: 15px;
+  color: red;
+}
+
+.contact-section a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+.contact-section li,
+.contact-section a {
+  list-style-type: none;
+  color: grey;
+  text-align: left;
+}
+
+.icons ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+/* 10. Forms/Comments/Inputs
+   =======================================================*/
+
+.mapping{
+  background: linear-gradient(90deg, rgba(255, 121, 95, 0.26) 0%, rgba(206, 23, 104, 0.76) 100%);
+  filter: gray; /* IE6-9 */
+  -webkit-filter: gray: ;scale(1);
+}
+
+/*form starts*/
+.input-group {
+  margin: 5px;
+}
+
+.input-group-addon,
+.form-control { 
+  color: grey;
+  background:transparent;   
+  border-color: rgba(224, 0, 0, 0.66);
+  outline: 0;
+}
+
+.form-control:focus { 
+  background:transparent;   
+  border-color: red;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px red,0 0 8px red;
+  box-shadow: inset 0 1px 1px red,0 0 8px red;
+}
+
+.form-parameters {
+  width:300px;float: left; 
+  margin: 0 10px;
+  border-color: rgba(154, 150, 150, 0.32);
+}
+
+/*comment*/
+
+.comment-box {
+  background-color: rgba(144, 40, 40, 0.14);
+  border: 1px solid transparent;
+  padding: 30px;
+  }
+
+  .comment-color {
+    border: 1px solid #555;
+  }
+
+.comment-author-box {
+    width: 85px;
+    float: left;
+    text-align: center;
+    padding-bottom: 15px
+}
+
+.comment-text {
+    margin-bottom: 50px;
+    margin-top: 5px;
+    position: relative;
+    clear: both
+}
+
+.comment-text-inner {
+    position: relative
+}
+
+.comment-info {
+    display: inline-block;
+    padding: 5px 7px;
+    margin-top: 3px;
+    background-color: transparent;
+    color: #929292;
+    font-size: .85em;
+    width: 100px
+}
+
+.comment-icon {
+  border-radius: 50%;
+  box-shadow: 0 0 0 7px rgba(247, 5, 5, 0.32);
+  display: block;
+  margin: 0 auto;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  width: 46px
+}
+
+.comment-icon img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    vertical-align: top
+}
+
+.comment-icon:empty {
+    height: 10px;
+    width: 10px;
+    margin-top: 20px;
+    background-color: #a4b4c7
+}
+
+
+.comment-container {
+  text-align: left;
+    margin-bottom: 20px;
+    max-width: 550px;
+    background-color:  rgba(255, 0, 0, 0.07);
+    border-radius: 0;
+    margin-left: 90px;
+    padding: 10px;
+    position: relative;
+    min-height: 50px;
+    border: 1px solid #555;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+}
+
+.comment-container:hover {
+  border: 1px solid red;
+}
+
+.comment-container:before,
+.comment-container:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0
+}
+
+.comment-container:before {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #333;
+    margin: 15px 0 0 -10px
+}
+
+.comment-container:after {
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-right: 9px solid #333;
+    margin: 15px 0 0 -8px
+}
+
+.comment-author {
+  color: #bfa6a6;
+  line-height: 5px;
+  float: left;
+  font-size: 15px; 
+}
+
+
+/* 11. Profile page
+   =======================================================*/
+.profile-section{
+  min-height: 100vh;
+  color: white;
+  background: #000;
+  text-align: center;
+  padding: 80px 0 30px 0;
+}
+
+.profile-img {
+  /*border: 1px solid grey;*/
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.profile-img table {
+  margin-top: 15px;
+  border: 1px solid red;
+}
+
+.profile-img img {
+  max-height: 128px;
+  max-width: 128px;
+  border-radius: 100px;
+}
+
+
+.profile-img a {
+  color: white;
+}
+
+.profile-img  ul {
+  list-style-type: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.profile-img li {
+    display: inline-block;
+}
+
+.profile-img li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 4px 6px;
+    text-decoration: none;
+}
+
+.profile-img li a:hover {
+  color: red;
+}
+
+.registration {
+  height: 50vh;
+  padding-top: 100px;
+  background-color: black;
+  color: white;
+}
+
+
+/* . Media queries
+   =======================================================*/
+@media(min-width:767px) {
+  .navbar {
+    padding: 20px 0;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+  }
+
+  .top-nav-collapse {
+      padding: 0;
+  }
+}
+
+@media(max-width:767px) {
+
+  section {
+    padding: 0;
+  }
+
+.right {
+  float: none;
+}
+  .services-section {
+    background: none;
+  }
+
+  .transparent-bg {
+    display: none;
+  }
+
+  .design {
+    padding: 25px 55px 25px 55px;
+    border-bottom: 1px solid #5d5b5b;
+  }
+
+  .developer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 25px 55px 25px 55px;
+  }
+
+  .quote-carousel .carousel-indicators .active {
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    transition: all .2s;
+  }
+
+
+}
